@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./resources/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./resources/css/main.css">
+  <script src="./resources/js/script.js" defer></script>
+
+  <title>Frontend Mentor | Clock App</title>
+</head>
+
+<body>
+
+  <main class="main">
+    <div class="main__wrapper">
+      <div id="quote-container" class="quote-container">
+        <div class="quote-container__wrapper">
+          <div id="quote" class="quote-container__quote"></div>
+          <div id="quote-author" class="quote-container__author"></div>
+        </div>
+        <span id="refresh"><img src="./resources/images/desktop/icon-refresh.svg" alt=""></span>
+      </div>
+
+      <div id="day-info" class="day-info">
+        <div class="day-info__greeting">
+          <span><img src="./resources/images/desktop/icon-sun.svg" alt="icon-sun"></span>
+          <h3 id="day-heading">Good Morning</h3>
+        </div>
+        <div class="day-info__clock">
+          <p>11:37</p><span>CET</span>
+        </div>
+        <div class="day-info__city">
+          IN BRAUNSCHWEIG, GER
+        </div>
+        <div id="show-more" class="toggle-switch">
+          <p class="more-less">MORE</p> <span><img src="./resources/images/desktop/icon-arrow-up.svg" alt=""></span>
+        </div>
+      </div>
+    </div>
+    <div id="location" class="location-info">
+      <div class="location-info__statistics">
+        <div class="timezone">
+          <span>current timezone</span>
+          <p id="zone-container"></p>
+        </div>
+        <div class="day-of-the-year">
+          <span>day of the year</span>
+          <p id="day-year"></p>
+        </div>
+        <div class="day-number">
+          <span>day of the week</span>
+          <p id="day-week"></p>
+        </div>
+        <div class="week-number">
+          <span>week number</span>
+          <p id="week-of-year"></p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+
+</html>
