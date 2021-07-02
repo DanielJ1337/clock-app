@@ -44,14 +44,14 @@ body {
             font-weight: 400;
             margin-bottom: 0.4rem;
 
-            color: #000;
+            color: #fff;
         }
         &__author {
             font-size: 1.2rem;
             font-weight: bold;
             margin-top: 0.4rem;
             // padding: 0 2.6rem;
-            color: #000;
+            color: #fff;
         }
 
         &.more {
@@ -105,6 +105,7 @@ body {
         &__city {
             font-size: 1.5rem;
             font-weight: bold;
+            text-transform: uppercase;
         }
     }
     .toggle-switch {
@@ -233,6 +234,25 @@ body {
                     }
                 }
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .main {
+        .location-info {
+            &.more {
+                bottom: 40%;
+            }
+        }
+
+        .day-info {
+            padding-bottom: 9.8rem;
+        }
+
+        .toggle-switch {
+            right: 16.5rem;
+            bottom: 9.8rem;
         }
     }
 }

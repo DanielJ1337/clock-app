@@ -3,6 +3,11 @@ const toggleInnerName = document.querySelector('.more-less');
 const refreshButton = document.getElementById('refresh');
 const dayContainer = document.getElementById('day-info');
 const zoneContainer = document.getElementById('zone-container');
+
+const city = document.getElementById('city');
+const greeting = document.getElementById('day-heading');
+const clock = document.getElementById('clock');
+const timezone = document.getElementById('timezone');
 const dayOfYear = document.getElementById('day-year');
 const dayOfWeek = document.getElementById('day-week');
 const weekNumber = document.getElementById('week-of-year');
@@ -46,6 +51,18 @@ function setBackground() {
     });
 }
 
+function setGreeting() {
+    const hours = time.getHours();
+
+    if (hours < 12) {
+        greeting.innerText = 'Good Morning';
+    } else if (hours > 12 && hours <= 17) {
+        greeting.innerText = 'Good Day';
+    } else {
+        greeting.innerText = 'Good Evening';
+    }
+}
+
 function fetchQuote() {
     const url = 'https://api.quotable.io/random';
 
@@ -66,6 +83,7 @@ function fetchDayInformation() {
         .then((res) => res.json())
         .then((data) => {
             const fetchedIP = data.ip;
+            city.innerText = data.city;
             const worldTimeURL = `http://worldtimeapi.org/api/ip/${fetchedIP}`;
             return fetch(worldTimeURL)
                 .then((res) => res.json())
@@ -74,6 +92,10 @@ function fetchDayInformation() {
                     dayOfYear.innerText = data.day_of_year;
                     dayOfWeek.innerText = data.day_of_week;
                     weekNumber.innerText = data.week_number;
+                    const time = data.datetime;
+                    const splicedTime = time.substring(11, 16);
+                    clock.innerText = splicedTime;
+                    timezone.innerText = data.abbreviation;
                 });
         });
 }
@@ -82,5 +104,6 @@ toggleButton.addEventListener('click', toggleView);
 refreshButton.addEventListener('click', fetchQuote);
 
 setBackground();
+setGreeting();
 fetchQuote();
 fetchDayInformation();
