@@ -91,7 +91,7 @@ function fetchDayInformation() {
         .then((data) => {
             const fetchedIP = data.ip;
             city.innerText = data.city;
-            const worldTimeURL = `http://worldtimeapi.org/api/ip/${fetchedIP}`;
+            const worldTimeURL = `https://worldtimeapi.org/api/ip/${fetchedIP}`;
             return fetch(worldTimeURL)
                 .then((res) => res.json())
                 .then((data) => {
