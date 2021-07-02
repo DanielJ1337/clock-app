@@ -38,16 +38,16 @@ function setBackground() {
     window.addEventListener('resize', () => {
         if (hours <= 18 && window.innerWidth > 375) {
             document.body.style.backgroundImage =
-                "url('/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/desktop/bg-image-daytime.jpg')";
+                "url('https://raw.githubusercontent.com/DanielJ1337/clock-app/main/resources/images/desktop/bg-image-daytime.jpg')";
         } else if (hours <= 18 && window.innerWidth <= 375) {
             document.body.style.backgroundImage =
-                "url('/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/mobile/bg-image-daytime.jpg')";
+                "url('https://raw.githubusercontent.com/DanielJ1337/clock-app/main/resources/images/mobile/bg-image-daytime.jpg')";
         } else if (hours > 18 && window.innerWidth <= 375) {
             document.body.style.backgroundImage =
-                "url('/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/mobile/bg-image-nighttime.jpg')";
+                "url('https://raw.githubusercontent.com/DanielJ1337/clock-app/main/resources/images/mobile/bg-image-nighttime.jpg')";
         } else {
             document.body.style.backgroundImage =
-                "url('/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/desktop/bg-image-nighttime.jpg')";
+                "url('https://raw.githubusercontent.com/DanielJ1337/clock-app/main/resources/images/desktop/bg-image-nighttime.jpg')";
         }
     });
 }
@@ -58,15 +58,15 @@ function setGreeting() {
     if (hours < 12) {
         greeting.innerText = 'Good Morning';
         greetingIcon.src =
-            '/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/desktop/icon-sun.svg';
+            'https://raw.githubusercontent.com/DanielJ1337/clock-app/8b4778a69aba5522a98b7458e20413902182fec9/resources/images/desktop/icon-sun.svg';
     } else if (hours > 12 && hours <= 17) {
         greeting.innerText = 'Good Day';
         greetingIcon.src =
-            '/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/desktop/icon-sun.svg';
+            'https://raw.githubusercontent.com/DanielJ1337/clock-app/8b4778a69aba5522a98b7458e20413902182fec9/resources/images/desktop/icon-sun.svg';
     } else {
         greeting.innerText = 'Good Evening';
         greetingIcon.src =
-            '/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/desktop/icon-moon.svg';
+            'https://raw.githubusercontent.com/DanielJ1337/clock-app/8b4778a69aba5522a98b7458e20413902182fec9/resources/images/desktop/icon-moon.svg';
     }
 }
 

@@ -52,7 +52,7 @@ body {
   color: #fff;
 }
 .main .quote-container.more {
-  top: -20%;
+  top: -25%;
 }
 .main .day-info {
   padding: 3.1667rem 2.6rem 15rem;
@@ -255,9 +255,6 @@ body {
 @media only screen and (min-width: 1024px) {
   .main .location-info.more {
     bottom: 30%;
-  }
-  .main .location-info__statistics {
-    margin-left: 4.5rem;
   }
   .main .location-info__statistics .timezone,
 .main .location-info__statistics .day-of-the-year,
