@@ -215,14 +215,54 @@ body {
   }
 }
 @media only screen and (min-width: 1400px) {
+  .main .quote-container {
+    padding-left: 16.5rem;
+  }
+  .main .quote-container__quote {
+    width: 60%;
+  }
   .main .location-info.more {
     bottom: 40%;
+    height: 49%;
+  }
+  .main .location-info__statistics {
+    margin-left: 14.5rem;
+  }
+  .main .location-info__statistics .timezone,
+.main .location-info__statistics .day-of-the-year,
+.main .location-info__statistics .day-number,
+.main .location-info__statistics .week-number {
+    width: 40%;
+  }
+  .main .location-info__statistics .timezone p,
+.main .location-info__statistics .day-of-the-year p,
+.main .location-info__statistics .day-number p,
+.main .location-info__statistics .week-number p {
+    font-size: 5.6rem;
+  }
+  .main #refresh svg path {
+    fill: #fff;
   }
   .main .day-info {
     padding-bottom: 9.8rem;
+    padding-left: 16.5rem;
   }
   .main .toggle-switch {
     right: 16.5rem;
     bottom: 9.8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main .location-info.more {
+    bottom: 30%;
+  }
+  .main .location-info__statistics {
+    margin-left: 4.5rem;
+  }
+  .main .location-info__statistics .timezone,
+.main .location-info__statistics .day-of-the-year,
+.main .location-info__statistics .day-number,
+.main .location-info__statistics .week-number {
+    width: 34%;
   }
 }/*# sourceMappingURL=main.css.map */

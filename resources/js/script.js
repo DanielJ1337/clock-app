@@ -6,6 +6,7 @@ const zoneContainer = document.getElementById('zone-container');
 
 const city = document.getElementById('city');
 const greeting = document.getElementById('day-heading');
+const greetingIcon = document.getElementById('greeting-icon');
 const clock = document.getElementById('clock');
 const timezone = document.getElementById('timezone');
 const dayOfYear = document.getElementById('day-year');
@@ -35,13 +36,13 @@ function setBackground() {
     console.log(hours);
     // check the time and window size to display the correct background
     window.addEventListener('resize', () => {
-        if (hours <= 12 && window.innerWidth > 375) {
+        if (hours <= 18 && window.innerWidth > 375) {
             document.body.style.backgroundImage =
                 "url('/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/desktop/bg-image-daytime.jpg')";
-        } else if (hours <= 12 && window.innerWidth <= 375) {
+        } else if (hours <= 18 && window.innerWidth <= 375) {
             document.body.style.backgroundImage =
                 "url('/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/mobile/bg-image-daytime.jpg')";
-        } else if (hours > 12 && window.innerWidth <= 375) {
+        } else if (hours > 18 && window.innerWidth <= 375) {
             document.body.style.backgroundImage =
                 "url('/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/mobile/bg-image-nighttime.jpg')";
         } else {
@@ -56,10 +57,16 @@ function setGreeting() {
 
     if (hours < 12) {
         greeting.innerText = 'Good Morning';
+        greetingIcon.src =
+            '/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/desktop/icon-sun.svg';
     } else if (hours > 12 && hours <= 17) {
         greeting.innerText = 'Good Day';
+        greetingIcon.src =
+            '/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/desktop/icon-sun.svg';
     } else {
         greeting.innerText = 'Good Evening';
+        greetingIcon.src =
+            '/Users/DanielJ/Desktop/Desktop/Coding-Projects/Courses/Website-Portfolio/Clock-App/resources/images/desktop/icon-moon.svg';
     }
 }
 
@@ -106,4 +113,6 @@ refreshButton.addEventListener('click', fetchQuote);
 setBackground();
 setGreeting();
 fetchQuote();
-fetchDayInformation();
+setInterval(() => {
+    fetchDayInformation();
+}, 1000);
