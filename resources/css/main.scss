@@ -15,10 +15,12 @@ body {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.15);
     background-blend-mode: darken;
+    overflow-x: hidden;
 }
 
 .main {
     height: 100vh;
+
     &__wrapper {
         height: 100vh;
         display: flex;
@@ -170,9 +172,9 @@ body {
 
         &.more {
             display: block;
-            bottom: 26%;
+            bottom: 31%;
             padding: 4.8rem 2.6rem;
-            height: auto;
+            height: 19%;
         }
     }
 }
@@ -204,7 +206,8 @@ body {
 
         .location-info {
             &.more {
-                bottom: 45%;
+                bottom: 37%;
+                height: auto;
                 padding: 2.5rem 2.6rem;
             }
 
@@ -214,7 +217,7 @@ body {
                 width: 75%;
                 margin: auto 6.4rem auto;
                 justify-content: space-between;
-                padding: 9.9rem 0;
+                padding: 9.9rem 0 0;
 
                 .timezone,
                 .day-of-the-year,
@@ -243,7 +246,7 @@ body {
     .main {
         .location-info {
             &.more {
-                bottom: 35%;
+                bottom: 28%;
             }
 
             &__statistics {
@@ -259,6 +262,14 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
+    .main {
+        .location-info {
+            &.more {
+                bottom: 45%;
+                height: 38%;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -307,6 +318,17 @@ body {
         .toggle-switch {
             right: 16.5rem;
             bottom: 9.8rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .main {
+        .location-info {
+            &.more {
+                bottom: 44%;
+                // height: 49%;
+            }
         }
     }
 }

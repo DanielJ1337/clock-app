@@ -67,7 +67,7 @@ function setGreeting() {
         greeting.innerText = 'Good Morning';
         greetingIcon.src =
             'https://raw.githubusercontent.com/DanielJ1337/clock-app/8b4778a69aba5522a98b7458e20413902182fec9/resources/images/desktop/icon-sun.svg';
-    } else if (hours > 12 && hours <= 17) {
+    } else if (hours >= 12 && hours <= 17) {
         greeting.innerText = 'Good Day';
         greetingIcon.src =
             'https://raw.githubusercontent.com/DanielJ1337/clock-app/8b4778a69aba5522a98b7458e20413902182fec9/resources/images/desktop/icon-sun.svg';
