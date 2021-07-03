@@ -33,7 +33,6 @@ function toggleView() {
 
 function setBackground() {
     const hours = time.getHours();
-    console.log(hours);
     // check the time and window size to display the correct background
     window.addEventListener('resize', () => {
         if (hours <= 18 && window.innerWidth > 375) {
