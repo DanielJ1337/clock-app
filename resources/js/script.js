@@ -111,7 +111,17 @@ function fetchDayInformation() {
                     const splicedTime = time.substring(11, 16);
                     clock.innerText = splicedTime;
                     timezone.innerText = data.abbreviation;
+                })
+                .catch((err) => {
+                    console.log(
+                        "Oops! This didn't work as expected! Maybe the API is down."
+                    );
                 });
+        })
+        .catch((err) => {
+            console.log(
+                "Oops! This didn't work as expected! Maybe the API is down."
+            );
         });
 }
 
