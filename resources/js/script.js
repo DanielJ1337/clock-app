@@ -34,6 +34,15 @@ function toggleView() {
 function setBackground() {
     const hours = time.getHours();
     // check the time and window size to display the correct background
+
+    if (hours <= 18) {
+        document.body.style.backgroundImage =
+            "url('https://raw.githubusercontent.com/DanielJ1337/clock-app/main/resources/images/desktop/bg-image-daytime.jpg')";
+    } else if (hours > 18) {
+        document.body.style.backgroundImage =
+            "url('https://raw.githubusercontent.com/DanielJ1337/clock-app/main/resources/images/desktop/bg-image-nighttime.jpg')";
+    }
+
     window.addEventListener('resize', () => {
         if (hours <= 18 && window.innerWidth > 375) {
             document.body.style.backgroundImage =

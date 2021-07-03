@@ -258,6 +258,9 @@ body {
     }
 }
 
+@media only screen and (min-width: 1200px) {
+}
+
 @media only screen and (min-width: 1400px) {
     .main {
         .quote-container {
@@ -269,7 +272,7 @@ body {
         }
         .location-info {
             &.more {
-                bottom: 57%;
+                bottom: 50%;
                 // height: 49%;
             }
 
